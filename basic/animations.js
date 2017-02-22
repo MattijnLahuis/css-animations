@@ -6,7 +6,6 @@ function startAnimation() {
   let animation = document.createElement('div');
 
   animation.className = "animation";
-  // animation.style['animation-duration'] = '1s';
 
   container.appendChild(animation);
   document.querySelector('.mainDiv').appendChild(container);
@@ -63,6 +62,7 @@ function initializeGame() {
 
         halfFruitDown.style.left = left + "px";
         halfFruitDown.style.top = top + "px";
+        halfFruitDown.style['animation-duration'] = Math.round(Math.random() * 5) + "s";
 
         halfFruitDown.addEventListener('animationend', function(event) {
           event.target.parentNode.removeChild(event.target);
@@ -75,6 +75,7 @@ function initializeGame() {
 
         halfFruitUp.style.left = left + "px";
         halfFruitUp.style.top = top + "px";
+        halfFruitUp.style['animation-duration'] = Math.round(Math.random() * 5) + "s";
 
         halfFruitUp.addEventListener('animationend', function(event) {
           event.target.parentNode.removeChild(event.target);
