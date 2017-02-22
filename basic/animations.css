@@ -3,14 +3,15 @@
 
   width: 1000px;
   height: 600px;
+
+  overflow: hidden;
 }
 
 .animationContainer {
-  position: relative;
+  position: absolute;
 
-  width: 600px;
   height: 400px;
-
+  bottom: -150px;
 
   animation-name: moveUp;
   animation-duration: 1s;

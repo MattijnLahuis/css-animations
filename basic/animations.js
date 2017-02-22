@@ -1,9 +1,4 @@
 function startAnimation() {
-  // let container = document.querySelector('.animationContainer');
-  // while (container.hasChildNodes()) {
-  //   container.removeChild(container.lastChild);
-  // }
-
   let container = document.createElement('div');
 
   container.className = 'animationContainer';
@@ -14,9 +9,17 @@ function startAnimation() {
   animation.style['animation-duration'] = '1s';
 
   container.appendChild(animation);
-  document.querySelector('body').appendChild(container);
+  document.querySelector('.mainDiv').appendChild(container);
 
-  container.addEventListener('animationend', function(event) {
-    event.target.parentNode.removeChild(event.target);
+  animation.addEventListener('animationend', function(event) {
+    event.target.parentNode.parentNode.removeChild(event.target.parentNode);
   })
+}
+
+function loop() {
+  let rand = Math.round(Math.random() * 1000);
+  setTimeout(function() {
+    startAnimation();
+    loop();
+  }, rand);
 }
