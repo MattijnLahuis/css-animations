@@ -14,10 +14,53 @@
   bottom: -150px;
 
   animation-name: moveUp;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-timing-function: linear;
   animation-direction: normal;
+}
 
+.halfFruitDown {
+  position: absolute;
+  width:150px;
+  height:75px;
+  background-color: gold;
+  border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+  border-top-right-radius: 110px; /* 100px of height + 10px of border */
+  border: 10px solid gray;
+  border-bottom: 0;
+
+  animation-name: slicedDown;
+  animation-duration: 1s;
+}
+
+.halfFruitUp {
+  position: absolute;
+  width:150px;
+  height:75px;
+  background-color: gold;
+  border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+  border-top-right-radius: 110px; /* 100px of height + 10px of border */
+  border: 10px solid gray;
+  border-bottom: 0;
+
+  animation-name: slicedUp;
+  animation-duration: 1s;
+}
+
+
+
+
+@keyframes slicedUp {
+  100% {
+    transform: translateY(-600px) rotate(1240deg);
+  }
+}
+
+
+@keyframes slicedDown {
+  100% {
+    transform: translateY(600px) rotate(1240deg);
+  }
 }
 
 @keyframes moveUp {
@@ -37,7 +80,7 @@
   border-radius: 75px;
 
   animation-name: moveRight;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-timing-function: linear;
   animation-direction: forwards;
 }
