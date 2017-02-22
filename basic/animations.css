@@ -1,5 +1,10 @@
 .mainDiv {
   position: relative;
+  background-image: url(wall.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  cursor: url(saber.png), auto;
 
   width: 1000px;
   height: 600px;
@@ -65,11 +70,11 @@
 
 .halfFruitDown {
   position: absolute;
-  width:150px;
-  height:75px;
+  width:100px;
+  height:50px;
   background-color: gold;
-  border-top-left-radius: 110px;  /* 100px of height + 10px of border */
-  border-top-right-radius: 110px; /* 100px of height + 10px of border */
+  border-top-left-radius: 65px;  /* 100px of height + 10px of border */
+  border-top-right-radius: 65px; /* 100px of height + 10px of border */
   border: 10px solid gray;
   border-bottom: 0;
 
@@ -79,11 +84,11 @@
 
 .halfFruitUp {
   position: absolute;
-  width:150px;
-  height:75px;
+  width:100px;
+  height:50px;
   background-color: gold;
-  border-top-left-radius: 110px;  /* 100px of height + 10px of border */
-  border-top-right-radius: 110px; /* 100px of height + 10px of border */
+  border-top-left-radius: 65px;  /* 100px of height + 10px of border */
+  border-top-right-radius: 65px; /* 100px of height + 10px of border */
   border: 10px solid gray;
   border-bottom: 0;
 
@@ -115,6 +120,169 @@
     transform: translateY(0px);
   }
 }
+
+
+
+.orange {
+	position:relative;
+	width:6em;
+	height:6em;
+	margin-top:1em;
+	background-color:orange;
+	border-radius:50%;
+	box-shadow:inset -.25em -.25em #CC8400;
+
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: forwards;
+}
+.orange:before {
+	content:'';
+	position:absolute;
+	top:-.5em;
+	left:3em;
+	height:0;
+	width:0;
+	border:1.5em solid transparent;
+	border-left:.5em solid brown;
+	border-top:0;
+	transform:rotate(20deg);
+	transform-origin:bottom left;
+}
+.orange:after {
+	content:'';
+	position:absolute;
+	top:-.5em;
+	left:1.5em;
+	height:0;
+	width:0;
+	border:.75em solid green;
+	border-bottom-color:darkgreen;
+	border-left-color:darkgreen;
+	border-radius:0 50%;
+}
+
+
+
+.lemon {
+	position:relative;
+	width:6em;
+	height:6em;
+	margin-top:1em;
+	background-color:#FFE135;
+	border-radius:50% 15%;
+	transform:rotate(45deg);
+	box-shadow:inset -.25em 0em #CCB42A;
+
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: forwards;
+}
+
+.pear {
+	position:relative;
+	width:6em;
+	height:6em;
+	margin-top:1em;
+	background-color:#D1E231;
+	border-radius:50% 15% 50% 50%;
+	transform:rotate(-45deg);
+	box-shadow:inset .15em -.25em #8A9A5B;
+
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: forwards;
+}
+.pear:after {
+	content:'';
+	position:absolute;
+	top:0em;
+	left:5.75em;
+	height:1.25em;
+	width:1em;
+	background-color:transparent;
+	border-radius:50% 0;
+	box-shadow:-.25em 0 0 brown;
+	transform:rotate(45deg);
+}
+
+
+
+.watermelon {
+	position:relative;
+	width:0;
+	margin-top:1em;
+	border:3em solid #f33;
+	border-radius:100% 0 0 0;
+	box-shadow:-.25em -.25em 0 .25em #373;
+
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: forwards;
+}
+.watermelon:before {
+	content:'';
+	position:absolute;
+	bottom:.2em;
+	right:.2em;
+	width:.33em;
+	height:.33em;
+	background-color:#fff;
+	border-radius:0 50%;
+	box-shadow:1.75em 0 0 0 #fff, 0 1.75em 0 0 #fff, 2.5em -1.5em 0 0 #fff, -1.5em 2.5em 0 0 #fff, 2em 2em 0 0 #fff;
+}
+.watermelon:after {
+	content:'';
+	position:absolute;
+	top:-3.5em;
+	left:-3.5em;
+	width:6.5em;
+	height:6.5em;
+	box-shadow:inset -.35em -.35em rgba(0,0,0,0.2);
+}
+
+.apple {
+	position:relative;
+	width:6em;
+	height:4.75em;
+	margin-top:1em;
+	background-color:#5BC236;
+	border-radius:2em 2em 3em 3em;
+	box-shadow:inset -.25em -.25em #438F28;
+
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: forwards;
+}
+.apple:before {
+	content:'';
+	position:absolute;
+	top:-.5em;
+	left:1.5em;
+	width:4.5em;
+	height:2.75em;
+	border-radius:3em 3em 0 0;
+	background-color:inherit;
+	box-shadow:-1.5em 0 0 #5BC236, inset -.3em 0 #438F28;
+}
+.apple:after {
+	content:'';
+	position:absolute;
+	top:-1em;
+	left:3em;
+	height:1.25em;
+	width:1em;
+	background-color:transparent;
+	border-radius:50% 0;
+	box-shadow:-.25em 0 0 brown;
+}
+
+
 
 .animation {
   position: relative;

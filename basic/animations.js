@@ -1,3 +1,7 @@
+const FRUITS = ['apple', 'orange', 'lemon', 'pear', 'watermelon'];
+
+const PIECE_COLORS = ['#ffffff', '#a7e8bd', '#e440f9', '#ff0000', '#01dfa5'];
+
 function startAnimation() {
   let container = document.createElement('div');
 
@@ -5,7 +9,9 @@ function startAnimation() {
 
   let animation = document.createElement('div');
 
-  animation.className = "animation";
+  let item = FRUITS[Math.floor(Math.random() * FRUITS.length)];
+
+  animation.className = item;
 
   container.appendChild(animation);
   document.querySelector('.mainDiv').appendChild(container);
@@ -15,7 +21,7 @@ function startAnimation() {
 
 function initializeGame() {
   let mouseDown = false;
-  let score = 0;
+  let score = 20;
   updateScore();
   let gameIsRunning = true;
 
@@ -62,6 +68,10 @@ function initializeGame() {
 
         halfFruitDown.style.left = left + "px";
         halfFruitDown.style.top = top + "px";
+
+        let color = PIECE_COLORS[Math.floor(Math.random() * PIECE_COLORS.length)];
+        halfFruitDown.style['background-color'] = color;
+
         halfFruitDown.style['animation-duration'] = Math.round(Math.random() * 5) + "s";
 
         halfFruitDown.addEventListener('animationend', function(event) {
@@ -76,6 +86,10 @@ function initializeGame() {
         halfFruitUp.style.left = left + "px";
         halfFruitUp.style.top = top + "px";
         halfFruitUp.style['animation-duration'] = Math.round(Math.random() * 5) + "s";
+
+        color = PIECE_COLORS[Math.floor(Math.random() * PIECE_COLORS.length)];
+        halfFruitUp.style['background-color'] = color;
+
 
         halfFruitUp.addEventListener('animationend', function(event) {
           event.target.parentNode.removeChild(event.target);
