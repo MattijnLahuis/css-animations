@@ -1,0 +1,32 @@
+.mainDiv {
+  position: relative;
+  left: 200px;
+  top: 200px;
+
+  width: 1000px;
+  height: 600px;
+}
+
+.animationContainer {
+  position: absolute;
+}
+
+.animation {
+  position: relative;
+  background-color: teal;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+
+  animation-name: moveRight;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes moveRight {
+  100% {
+    transform: translateX(500px);
+  }
+}
