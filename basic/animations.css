@@ -7,6 +7,43 @@
   overflow: hidden;
 }
 
+.score {
+  margin-top: 50px;
+}
+
+.gameOver {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+
+  animation-name: youLost;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes youLost {
+    25% {
+      background-color: yellow;
+    }
+    50% {
+      background-color: black;
+      color: white;
+    }
+    75% {
+      background-color: orange;
+      color: black;
+    }
+    100% {
+      background-color: aqua;
+      transform: scale(10) rotate3d(1,1,1,360deg);
+      font-size: 40px;
+    }
+}
+
 .animationContainer {
   position: absolute;
 
@@ -30,7 +67,7 @@
   border-bottom: 0;
 
   animation-name: slicedDown;
-  animation-duration: 1s;
+  animation-duration: 5s;
 }
 
 .halfFruitUp {
@@ -44,7 +81,7 @@
   border-bottom: 0;
 
   animation-name: slicedUp;
-  animation-duration: 1s;
+  animation-duration: 5s;
 }
 
 
@@ -52,14 +89,14 @@
 
 @keyframes slicedUp {
   100% {
-    transform: translateY(-600px) rotate(1240deg);
+    transform: translateY(-600px) rotate3d(1,1,1,1240deg);
   }
 }
 
 
 @keyframes slicedDown {
   100% {
-    transform: translateY(600px) rotate(1240deg);
+    transform: translateY(600px) rotate3d(1,1,1,1240deg);
   }
 }
 
