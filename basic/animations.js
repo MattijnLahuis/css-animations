@@ -20,6 +20,8 @@ function initializeGame() {
   updateScore();
   let gameIsRunning = true;
 
+  document.querySelector('.youlost').innerHTML = "";
+
   document.addEventListener('mousedown', function() {
     mouseDown = true;
   });
